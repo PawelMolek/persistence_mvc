@@ -1,0 +1,14 @@
+<h1>Recipes</h1>
+
+Our blog has <%= Recipe.public_count %> Recipes and counting!
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <% unless recipe.archived? %>
+      <li>
+        <%= link_to recipe.title, recipe %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+<%= link_to "New Recipe", new_recipe_path %>
