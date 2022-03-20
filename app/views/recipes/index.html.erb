@@ -6,6 +6,7 @@ Our blog has <%= Recipe.public_count %> Recipes and counting!
   <% @recipes.each do |recipe| %>
     <% unless recipe.archived? %>
       <li>
+
         <%= link_to recipe.title, recipe %>
       </li>
     <% end %>

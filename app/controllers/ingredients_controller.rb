@@ -8,5 +8,5 @@ class IngredientsController < ApplicationController
   private
   def ingredient_params
     params.require(:ingredient).permit(:ingredient)
-  end
+  endz
 end
